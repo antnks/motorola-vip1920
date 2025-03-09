@@ -1,6 +1,13 @@
 # motorola-vip1920
 Hacking Telia tv box Motorola VIP1920
 
+# Telia AES key
+
+Symmetric AES-256-ECB key used to encrypt firmware:
+```
+5acb889e1cb69263ee0220241a4b21a4ef6df5459e3425b672b0ea5cb5ba340f
+```
+
 # Telia firmware boot log
 
 ```
