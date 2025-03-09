@@ -461,3 +461,355 @@ process '/usr/bin/ntp.sh' (pid 388) exited. Scheduling for restart.
 starting pid 401, tty '': '/usr/bin/ntp.sh'
 sntp: invalid Internet address '--no--ip'
 ```
+
+# Custom kernel boot log
+
+```
+Booting...
+System memory: 128 MB
+
+Video memory: 32 MB
+
+Using Slot 1
+
+Unpacking Image ...Done
+
+Linux version 2.6.17.14-sh (erik@xenalinux) (gcc version 3.4.3 (STMicroelectronics Special) [build Feb 5 2007]) #1 Thu Sep 11 14:28:31 CEST 2008
+STMicroelectronics STb7100 Reference board initialisation
+LMI SYS setup, fixing blue dots
+LMI VID setup, fixing blue dots
+STb7109 version 3.x
+Built 1 zonelists
+Kernel command line: console=ttyAS0,115200 bigphysarea=2048 mtdparts=Onboard_Flash:0x00070000@0x00390000(FFS),0x00390000@0x0(Raw) ramtopaddress=0xAC000000 systemmemsize=131072 videomemsize=32768 rbl=2 rbl_mode=1 dbl=1 fw=2.26
+PID hash table entries: 512 (order: 9, 2048 bytes)
+Using tmu for system timer
+Console: colour dummy device 80x25
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 112056k/120832k available (1580k kernel code, 8612k reserved, 280k data, 76k init)
+PVR=04061100 CVR=30480000 PRR=00009300
+I-cache : n_ways=2 n_sets=256 way_incr=8192
+I-cache : entry_mask=0x00001fe0 alias_mask=0x00001000 n_aliases=2
+D-cache : n_ways=2 n_sets=512 way_incr=16384
+D-cache : entry_mask=0x00003fe0 alias_mask=0x00003000 n_aliases=4
+Mount-cache hash table entries: 512
+CPU: STb710x
+checking if image is initramfs... it is
+Overmounted tmpfs
+Freeing initrd memory: 906k freed
+NET: Registered protocol family 16
+Generic PHY: Registered new driver
+DMA: Registering DMA API.
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+TCP: Hash tables configured (established 4096 bind 2048)
+TCP reno registered
+bigphysarea: Allocated 1152 pages at 0x842ed000.
+JFFS2 version 2.2. (C) 2001-2003 Red Hat, Inc.
+io scheduler noop registered
+io scheduler anticipatory registered (default)
+STPIO layer initialised
+Software Watchdog Timer: 0.07 initialized. soft_noboot=0 soft_margin=60 sec (nowayout= 1)
+STMicroelectronics ASC driver initialized
+ttyAS0 at MMIO 0xb8031000 (irq = 122) is a asc
+DMA: Registering ST40 STB710x FDMAC handler (5 channels).
+STMicroelectronics - Coprocessors st231 Init
+st-coprocessor-0: No RAM reserved
+st231-0 Coprocessor -------------------------------------------
+    not configured!
+---------------------------------------------------------------
+st-coprocessor-1: No RAM reserved
+st231-1 Coprocessor -------------------------------------------
+    not configured!
+---------------------------------------------------------------
+ST Cryptocore Version 1.5b
+RAMDISK driver initialized: 1 RAM disks of 262144K size 1024 blocksize
+LAN8700: Registered new driver
+STMMAC driver:
+	platform registration... <6>done!
+	no valid MAC address; please, set using ifconfig or nwhwconfig!
+STMMAC MII Bus: probed
+Registrating STMMAC reboot notifier
+Generic ST boards onboard flash device: 0x00400000 (4.0MB) at 0x00000000
+Onboard_Flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x0035
+cfi_cmdset_0001: Erase suspend on write enabled
+2 cmdlinepart partitions found on MTD device Onboard_Flash
+Creating 2 MTD partitions on "Onboard_Flash":
+0x00390000-0x00400000 : "FFS"
+0x00000000-0x00390000 : "Raw"
+i2c /dev entries driver
+i2c_st40_pio: ST40 PIO based I2C Driver
+i2c_st40_pio: allocated pin (2,0) for scl (0x841f4a24)
+i2c_st40_pio: allocated pin (2,1) for sda (0x841f4a34)
+i2c_st40_pio: allocated pin (4,0) for scl (0x841f4b24)
+i2c_st40_pio: allocated pin (4,1) for sda (0x841f4b34)
+i2c_st40_pio bus 0: SCL=PIO2[0], SDA=PIO2[1]
+i2c_st40_pio bus 1: SCL=PIO4[0], SDA=PIO4[1]
+fan_ctrl: Activating fan monitoring
+TCP bic registered
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+Freeing unused kernel memory: 76k freed
+gpio: module license 'Proprietary' taints kernel.
+-----------------------------------------------------
+Init started
+-----------------------------------------------------
+Mounting filesystems
+Verifying system integrity...
+System integrity is intact
+Mounting the flash file system
+Reading configuration parameters
+Running on Motorola VIP1920-9T with Firmware version 2.26
+Using Vendor Class Id Motorola_VIP1920-9T
+Using Bootcast Id motorola-vip1920-9t
+Using SAP Id motorola.vip1920-9t
+kb driver loaded
+LEDs only mounted
+Initialized display. Type is 0
+Front_Paneldev: registered device with major 122
+front_panel driver loaded
+Initializing video
+Open graphics device (width = 720, height = 576, bitdepth = 32).
+Initialize Free Type Library
+Loading font: /usr/fonts/Vera.ttf
+Releasing font
+Deinitialize Free Type Library
+Graphics device closed.
+Entering video active mode
+Open graphics device (width = 720, height = 576, bitdepth = 32).
+Initialize Free Type Library
+Loading font: /usr/fonts/Vera.ttf
+Open graphics device (width = 720, height = 576, bitdepth = 32).
+Initialize Free Type Library
+Loading font: /usr/fonts/Vera.ttf
+Could not open /tmp/splash.bmp
+Mounting flash memory
+NAND device: Manufacturer ID: 0x20, Chip ID: 0x75 (ST Micro NAND 32MiB 3,3V 8-bit)
+Scanning device for bad blocks
+Bad eraseblock 258 at 0x00408000
+Creating 1 MTD partitions on "NAND 32MiB 3,3V 8-bit":
+0x00000000-0x02000000 : "KREATEL NANDflash partition"
+yaffs Sep 11 2008 14:28:35 Installing. 
+yaffs: dev is 32505858 name is "mtdblock2"
+yaffs: Attempting MTD mount on 31.2, "mtdblock2"
+block 259 is bad
+PHY: 0:1f - Link is Up - 100/Full
+input: Kreatel IR-keyboard/remote as /class/input/input0
+ir_kreatel: Enable interrupt
+IR driver loaded
+No valid splash image in local storage
+Bringing up the network
+Reading link status...
+-> Link is up
+Using DHCP
+IP-Config: eth0 hardware address 00:02:9b:22:b7:20 mtu 1500 DHCP
+IP-Config: eth0 guessed broadcast address 192.168.99.255
+IP-Config: eth0 guessed nameserver address 192.168.99.9
+IP-Config: eth0 complete (from 192.168.99.9):
+ address: 192.168.99.98    broadcast: 192.168.99.255   netmask: 255.255.255.0   
+ gateway: 192.168.99.9     dns0     : 192.168.99.9     dns1   : 0.0.0.0         
+ nfsserver: 192.168.99.9
+ nfspath: 
+
+Download parameters:
+  Splash boot order: 3
+  Kernel boot order: 26145
+  Bootcast address : 224.2.2.2:22222
+  Sap address      : 224.2.127.254:9875
+
+***** Loading splash image *****
+
+Using Local Storage
+LS: No valid splash image available.
+
+Unable to successfully display a splash image. Skipping splash!
+
+***** Loading kernel image *****
+
+Using TFTP
+TFTP: Server pool attempt 1 of 1
+TFTP: Server node attempt 1 of 2
+Connecting to 192.168.99.9
+Sending read request for vip1920-kernel
+Negotiation transfer size = 2327744
+Negotiation data timeout = -1 seconds
+Download completed
+Verifying image...
+Uncompressing image...
+Unmounting nand fsave entry: isCheckpointed 0
+checkpoint byte count 0
+save exit: isCheckpointed 0
+lash...
+Unloading IR module...
+Loading new kernel...
+Initrd at 0xb0001000, length 1141152 byDisabling FDMA
+Shuting down STMMAC TX and RX DMA
+tes
+Command line (355 bytes):  console=ttyAS0,115200 bigphysarea=2048 mtdparts=Onboard_Flash:0x70000@0x390000(FFS),0x390000@0x0(Raw) ip=192.168.99.98::192.168.99.9:255.255.255.0 nwhwconf=device:eth0,hwaddr:00:02:9B:22:B7:20 rbl=2 rbl_mode=1 dbl=1 bch=224.2.2.2:22222 ramtopaddress=0xac000000 systemmemsize=131072 videomemsize=32768 serverid=192.168.99.9 last_key=none videomode=PAL,RGB
+Kernel loaded successfully!
+Starting new kernel...
+kexec information
+  segment[0]: 0x84600000 - 0x84827000 (0x00227000)
+  segment[1]: 0xb0001000 - 0xb0118000 (0x00117000)
+  start     : 0x84601000
+
+Entering Space Enhanced Mode (32 bit)
+Running 32 bit Mode
+Linux version 2.6.23.17_stm23_0123 (root@cb4194954217) (gcc version 4.3.4 20091123 (STMicroelectronics/Linux Base) ) #1 PREEMPT Tue Mar 4 15:08:57 UTC 2025
+Booting machvec: STb7100 Reference board
+Reserve 44672 KiB for STAVMEM (28672 KiB for graphics)
+STx7109 version 3.x
+Chip version 3.4
+Setting version to 4.0 to match commercial branding
+Adjusting DDR video memory delay for cut 3.4 CPUs, LMIPL_VID_DLL2_OFF_CMD=20
+Kernel command line:  console=ttyAS0,115200 bigphysarea=2048 mtdparts=Onboard_Flash:0x70000@0x390000(FFS),0x390000@0x0(Raw) ip=192.168.99.98::192.168.99.9:255.255.255.0 nwhwconf=device:eth0,hwaddr:00:02:9B:22:B7:20 rbl=2 rbl_mode=1 dbl=1 bch=224.2.2.2:22222 ramtopaddress=0xac000000 systemmemsize=131072 videomemsize=32768 serverid=192.168.99.9 last_key=none videomode=PAL,RGB
+Kernel has NOT DVR support
+bpa2: partition 'bigphysarea' created at 0x40702000, size 1332 kB (0x0014d000 B)
+Using tmu for system timer
+Using 16.594 MHz high precision timer.
+console [ttyAS0] enabled
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 75348k/131072k available (1749k kernel code, 347k data, 92k init)
+NET: Registered protocol family 16
+Generic PHY: Registered new driver
+Time: SuperH clocksource has been installed.
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 4096 bind 4096)
+TCP reno registered
+Unpacking initramfs...
+Overmounted tmpfs
+ done
+squashfs: version 3.4 (2008/08/26) Phillip Lougher
+JFFS2 version 2.2. © 2001-2006 Red Hat, Inc.
+io scheduler noop registered
+io scheduler anticipatory registered (default)
+stm_hwrandom stm_hwrandom: STM Random Number Generator ver. 0.1
+Kboxdev: registered device with major 120
+STMicroelectronics ASC driver initialized
+stasc.0: ttyAS0 at MMIO 0x18031000 (irq = 122) is a stasc
+stasc.1: ttyAS1 at MMIO 0x18032000 (irq = 121) is a stasc
+loop: module loaded
+SMSC LAN8187: Registered new driver
+SMSC LAN8700: Registered new driver
+SMSC LAN911x Internal PHY: Registered new driver
+SMSC LAN8710/LAN8720: Registered new driver
+	MAC 10/100
+No valid MAC address yet; it will be set from the console later.
+	eth0 - (dev. name: stmmaceth - id: 0, IRQ #133
+	IO base addr: 0xa0110000)
+STMMAC MII Bus: probed
+eth0: PHY ID 0007c0c4 at 31 IRQ 2 (0:1f) active
+netconsole: not configured
+nwhw_config: (eth0) setting mac address: 00:02:9B:22:B7:20
+VIP19xx onboard NOR flash device
+Onboard_Flash: Found 1 x16 devices at 0x0 in 16-bit bank
+Using word write for ST M28WXX0 FLASH
+cfi_cmdset_0001: Erase suspend on write enabled
+2 cmdlinepart partitions found on MTD device Onboard_Flash
+Creating 2 MTD partitions on "Onboard_Flash":
+0x00390000-0x00400000 : "FFS"
+first erase region 1 for slave @ 3735552
+0x00000000-0x00390000 : "Raw"
+first erase region 0 for slave @ 0
+mice: PS/2 mouse device common for all mice
+i2c /dev entries driver
+Software Watchdog Timer: 0.07 initialized. soft_noboot=0 soft_margin=60 sec (nowayout= 1)
+STMicroelectronics - Coprocessors st231 Init
+st-coprocessor-0: No RAM reserved
+st231.0 Coprocessor -------------------------------------------
+    not configured!
+---------------------------------------------------------------
+st-coprocessor-1: No RAM reserved
+st231.1 Coprocessor -------------------------------------------
+    not configured!
+---------------------------------------------------------------
+stm_rng hardware driver 1.0 configured
+TCP cubic registered
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+stmmac_timer: TMU2 Timer ON (freq 256Hz)
+preallocating 1024(1024) skbs of size 2048
+Successfully pre-allocated 1024 skbs
+IP-Config: Complete: 
+      device=eth0ddr=192.168.99.98ask=255.255.255.0w=192.168.99.9,
+     host=192.168.99.98, domain=, nis-domain=(none),
+     bootserver=255.255.255.255ootserver=255.255.255.255ootpath=Freeing unused kernel memor�
+init started: BusyBox v1.13.3 ()
+
+starting pid 210, tty '': '/etc/rc.sysinit'
+insmod: cannot insert 'usbcore': unknown symbol in module, or unknown parameter
+insmod: cannot insert 'ohci-hcd': unknown symbol in module, or unknown parameter
+insmod: cannot insert 'ehci-hcd': unknown symbol in module, or unknown parameter
+insmod: cannot insert 'usbhid': unknown symbol in module, or unknown parameter
+
+starting pid 221, tty '': '/usr/sbin/telnetd'
+
+starting pid 223, tty '': '/bin/sh'
+
+
+BusyBox v1.13.3 () built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+/bin/sh: can't access tty; job control turned off
+/ # PHY: 0:1f - Link is Up100/Full
+/ # id
+uid=0 gid=0
+/ # ls -l
+drwxrwxr-x    2 0        0            1060 Jan  1 00:00 bin
+drwxr-xr-x    4 0        0            2180 Jan  1 00:00 dev
+drwxrwxr-x    2 0        0             100 Jan  1 00:00 etc
+lrwxrwxrwx    1 0        0              10 Jan  1 00:00 init -> /sbin/init
+drwxrwxr-x    2 0        0             160 Jan  1 00:00 lib
+dr-xr-xr-x   28 0        0               0 Jan  1 00:00 proc
+drwxrwxr-x    2 0        0             440 Jan  1 00:00 sbin
+drwxr-xr-x   10 0        0               0 Jan  1 00:00 sys
+drwxrwxrwt    2 0        0              40 Jan  1 00:00 tmp
+drwxrwxr-x    4 0        0              80 Jan  1 00:00 usr
+/ # cat /pro
+/ # cat /proc/[Jver[9D
+/ # cat /proc/version [J
+Linux version 2.6.23.17_stm23_0123 (root@cb4194954217) (gcc version 4.3.4 20091123 (STMicroelectronics/Linux Base) ) #1 PREEMPT Tue Mar 4 15:08:57 UTC 2025
+/ # busy
+/ # busybox [Jversion
+version: applet not found
+/ # 
+/ # busybox version[J       -v
+-v: applet not found
+/ # 
+/ # busybox -v[J   
+BusyBox v1.13.3 () multi-call binary
+Copyright (C) 1998-2008 Erik Andersen, Rob Landley, Denys Vlasenko
+and others. Licensed under GPLv2.
+See source distribution for full notice.
+
+Usage: busybox [function] [arguments]...
+   or: function [arguments]...
+
+	BusyBox is a multi-call binary that combines many common Unix
+	utilities into a single executable.  Most people will create a
+	link to busybox for each function they wish to use and BusyBox
+	will act like whatever it was invoked as!
+
+Currently defined functions:
+	[, [[, ash, awk, basename, brctl, bunzip2, bzcat, cat, chgrp,
+	chmod, chown, chroot, clear, cp, cut, date, dd, df, dirname, dmesg,
+	du, echo, egrep, env, expr, false, fdisk, fgrep, find, freeramdisk,
+	ftpget, ftpput, grep, gunzip, gzip, halt, head, hostname, id,
+	ifconfig, init, insmod, ip, ipaddr, iplink, iproute, kill, killall,
+	ln, losetup, ls, lsmod, md5sum, mdev, mkdir, mkfifo, mknod, mkswap,
+	mktemp, modprobe, more, mount, mv, netstat, nslookup, pidof, ping,
+	poweroff, printf, ps, pwd, reboot, renice, reset, rm, rmdir, rmmod,
+	route, sed, sh, sleep, sort, strings, swapoff, swapon, sync, tail,
+	tar, telnet, telnetd, test, tftp, time, top, touch, tr, traceroute,
+	true, udhcpc, umount, uniq, uptime, usleep, vi, watchdog, wc,
+	wget, which, xargs, yes, zcat, zcip
+
+/ # 
+```
